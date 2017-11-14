@@ -12,5 +12,6 @@ router.use(function (request, response, next) {
 });
 
 router.use("/postLocation", require("./postLocation"));
+router.use("/getDevices", require("./getDevices"));
 
 module.exports = router;

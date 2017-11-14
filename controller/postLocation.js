@@ -1,6 +1,6 @@
 const express = require('express'),
     router = express.Router(),
-    locations = require('../model/locations');
+    locations = require('../model/collections/locations');
 
 router.post(function (request, response) {
     console.log(request.body);
