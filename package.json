@@ -1,0 +1,26 @@
+{
+  "name": "buffserver",
+  "version": "1.0.0",
+  "description": "Server for buffhome.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuffHome/GEOServer.git"
+  },
+  "author": "Steve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuffHome/GEOServer/issues"
+  },
+  "homepage": "https://github.com/BuffHome/GEOServer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "child_process": "^1.0.2",
+    "express": "^4.15.4",
+    "html2json": "^1.0.2",
+    "q": "^1.5.0"
+  }
+}
