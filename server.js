@@ -24,7 +24,11 @@ app.use(express.static(__dirname + '/view'));
 app.set('views',__dirname + '/view');
 app.set('view engine', 'ejs');
 
+app.use(express.static(__dirname + '/public'));
+
 app.use("/", require("./controller"));
 
 http.createServer(app).listen(port);
 console.log("[Server] Server started on port " + port);
+
+require('./model/processes/javaGUI').openView(port,1000,400);

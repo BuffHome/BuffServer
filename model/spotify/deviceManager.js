@@ -8,14 +8,10 @@ var getDevices = function (callback) {
     })
 };
 
-var getPlayer = function (callback) {
+var getCurrentPlaybackState = function (callback) {
     spotify.getApi(function (api) {
         api.getMyCurrentPlaybackState(function (response) {
             callback(response);
         })
     })
 };
-
-getDevices(function (reponse) {
-    console.log(reponse);
-});

@@ -1,9 +1,6 @@
 const SpotifyApi = require('spotify-web-api-node');
 
-var spotifyApi = new SpotifyApi({
-    clientId: '1f8b09a172424dc6ace84c6f62e4891d',
-    clientSecret: '7ffd94ad2dd646e3be08b0cde8a47dda'
-});
+var spotifyApi = new SpotifyApi(require('./credentials'));
 
 
 var createCredentials = function (callback) {
@@ -26,10 +23,8 @@ var init = function (callback) {
 };
 
 var getApi = function (callback) {
-    createCredentials(function () {
-        if (callback) callback(spotifyApi);
-        return spotifyApi;
-    });
+    if(callback) callback(spotifyApi);
+    return spotifyApi;
 };
 
 module.exports.deviceManager = require('./deviceManager');
