@@ -4,7 +4,8 @@ const express = require('express'),
     locations = require('./model/collections/locations'),
     users = require('./model/collections/users'),
     timetable = require('./model/timetable'),
-    spotify = require('./model/spotify');
+    spotify = require('./model/spotify'),
+    Stage = require('./model/classes/Stage');
 
 var app = express();
 const port = process.argv[2];
@@ -31,4 +32,4 @@ app.use("/", require("./controller"));
 http.createServer(app).listen(port);
 console.log("[Server] Server started on port " + port);
 
-require('./model/processes/javaGUI').openView(port,1000,400);
+var stage = new Stage(port,600,400);
