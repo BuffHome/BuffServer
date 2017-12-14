@@ -10,6 +10,10 @@ function Stage(port, width, height) {
         outStream.enqueue(data);
     });
 
+    child.on('close', function (data) {
+        console.log(data);
+    });
+
     this.outStream = outStream;
     this.process = child;
 }
